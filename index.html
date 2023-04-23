@@ -8,6 +8,35 @@
     <title>Encriptador de Texto</title>
 </head>
 <body>
+    <main class="main-container">
+        <section class="left-side">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo image" class="img-logo">
+            </div>
+        </section>
+        <section class="middle-side">
+            <div class="middle-top">
+                <input type="text" name="input-text" id="input-text" placeholder="Ingrese el texto aqui">
+            </div>
+            <div class="middle-bottom">
+                <div class="messages">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="button-options">
+                    <button id="btn-encrypt">Encriptar</button>
+                    <button id="btn-decrypt">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <section class="right-side">
+            <div class="right-result">
+                <img src="img/imagefortext.svg" alt="result image">
+                <p class="res-mess-title">Ningún mensaje fue encontrado</p>
+                <p class="res-mess-details">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </section>
+    </main>
+
     <script src="js/encrypt.js"></script>
     <script src="js/decrypt.js"></script>
 </body>
