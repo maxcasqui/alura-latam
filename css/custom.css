@@ -28,7 +28,7 @@ body{
 
 .main-container{
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .left-side{
@@ -73,12 +73,15 @@ body{
     gap: 1em;
 }
 .button-options > button, #btn-copy-res{
-    width: 300px;
+    width: 45%;
     border: none;
     border-radius: 24px;
     font-size: 18px;
     height: 60px;
     cursor: pointer;
+}
+#btn-copy-res{
+    width: 95%;
 }
 #btn-encrypt{
     background-color: var(--dark-blue-300);
@@ -126,4 +129,64 @@ body{
     font-size: 16px;
     text-align: center;
     color: var(--gray-blue-300);
+}
+
+@media (max-width: 768px){
+    body{
+        overflow-y: visible;
+    }
+    .img-result{
+        display: none;
+    }
+    .main-container{
+        flex-wrap: wrap;
+    }
+    .left-side, .middle-side, .right-side{
+        flex: 1 1 100%;
+        padding-top: 2em;
+        padding-inline-start: 10%;
+    }
+    .left-side{
+        justify-content: flex-start;
+    }
+    .middle-side{
+        height: 30%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        padding-bottom: .5em;
+    }
+    .right-side{
+        padding-top: 0;
+        display: flex;
+        height: 30vh;
+        padding: 1em 0;
+        justify-content: center;
+    }
+    .right-result{
+        height: 90%;
+    }
+
+    .input-text, .res-mess-title{
+        font-size: 18px;
+    }
+    .res-mess-details, .messages{
+        font-size: 14px;
+    }
+
+    .button-options > button, #btn-copy-res{
+        width: 60%;
+    }
+}
+
+@media (max-width: 400px){
+    body{
+        overflow: visible;
+    }
+    .button-options{
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-options>button{
+        width: 100%;
+        height: 50px;
+    }
 }
