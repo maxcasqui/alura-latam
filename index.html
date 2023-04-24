@@ -16,11 +16,11 @@
         </section>
         <section class="middle-side">
             <div class="middle-top">
-                <input type="text" name="input-text" id="input-text" placeholder="Ingrese el texto aqui">
+                <textarea class="input-text" id="input-text" placeholder="Ingrese el texto aqui" autofocus></textarea>
             </div>
             <div class="middle-bottom">
                 <div class="messages">
-                    <p>Solo letras minúsculas y sin acentos</p>
+                    <p><img src="img/icon-info.svg" alt=""> Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="button-options">
                     <button id="btn-encrypt">Encriptar</button>
@@ -30,9 +30,12 @@
         </section>
         <section class="right-side">
             <div class="right-result">
-                <img src="img/imagefortext.svg" alt="result image">
-                <p class="res-mess-title">Ningún mensaje fue encontrado</p>
-                <p class="res-mess-details">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <section>
+                    <img src="img/imagefortext.svg" alt="result image">
+                    <p class="res-mess-title">Ningún mensaje fue encontrado</p>
+                    <p class="res-mess-details">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </section>
+                <button id="btn-copy-res">Copiar</button>
             </div>
         </section>
     </main>

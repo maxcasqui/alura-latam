@@ -1,4 +1,5 @@
 :root{
+    --white: #fff;
     --dark-blue-100: #609ED4;
     --dark-blue-200: #356EA9;
     --dark-blue-300: #0A3871;
@@ -19,5 +20,110 @@
 }
 
 body{
+    font-family: sans-serif;
     background-color: var(--light-blue-100);
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-side{
+    padding-top: 1em;
+    flex: 1 1 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.middle-side{
+    padding-top: 5em;
+    flex: 1 1 60%;
+    padding-inline-start: 1%;
+}
+
+.input-text{
+    resize: none;
+    width: 90%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 28px;
+    color: var(--dark-blue-500);
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.input-text::-webkit-input-placeholder{
+    color: var(--dark-blue-500);
+}
+
+.middle-top{
+    height: 70%;
+}
+.middle-bottom{
+    padding-top: 2em;
+    height: 30%;
+    color: black;
+}
+.button-options{
+    display: flex;
+    width: 90%;
+    gap: 1em;
+}
+.button-options > button, #btn-copy-res{
+    width: 300px;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    height: 60px;
+    cursor: pointer;
+}
+#btn-encrypt{
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+}
+#btn-decrypt, #btn-copy-res{
+    border: 1px solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+    background-color: var(--light-blue-100);
+}
+#btn-decrypt:hover, #btn-copy-res:hover, #btn-encrypt:hover{
+    transform: translateY(-4px);
+    transition: .5s transform;
+}
+
+.right-side{
+    padding-top: 1em;
+    flex: 0 1 30%;
+}
+
+.right-result{
+    width: 85%;
+    height: 89vh;
+    padding: 1em;
+    background-color: var(--white);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.res-mess-title{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: .4em;
+    color: var(--dark-blue-500);
+}
+
+.res-mess-details{
+    margin-top: 0;
+    font-size: 16px;
+    text-align: center;
+    color: var(--gray-blue-300);
 }
